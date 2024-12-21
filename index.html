@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Assignments</title>
+  </head>
+  <body>
+    <script>
+      const webPath = () =>
+        window.location.pathname.endsWith("/")
+          ? window.location.pathname.slice(0, -1)
+          : window.location.pathname;
+      const redirect = url => window.location.href = url;
+      
+      switch(webPath()) {
+        case "/dokumentasi-opm":
+          redirect("https://drive.google.com/drive/folders/1da2UDt1AYDwR-k-GqT7eVx9SYzsOH7J8");
+          break;
+        default:
+          alert("Kamu tidak akan menemukan apapun disini. Mohon kunjungi tautan asli yang telah dibagikan.");
+      }
+    </script>
+  </body>
+</html>
